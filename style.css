@@ -22,6 +22,7 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 }
 
 #btn {
+	color: #ffffff;
 	background-color:#478ac9;
 	display:table;
 	margin:auto;

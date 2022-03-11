@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<title>Coolio Site</title>
+	</head>
+	<body>
+		<!-- Cool Kid Particles.js -->
+		<div id="particles-js"></div>
+		<!-- main stuff -->
+		<div class="main">
+			<div>
+				<div style="text-align: center;">
+					<h1 style="padding-bottom:10px">Logging out...</h1>
+				</div>
+			<img src="load.webp" style="display:block;margin:auto;height:80px;width:80px;padding-bottom:10px;"/>
+			</div>
+		</div>
+		<script src="pjs/particles.js" defer></script>
+		<script src="pjs/app.js" defer></script>
+		<script>
+			window.setTimeout(redirect,3000);
+			function redirect() {
+				window.location.href = "index.html";
+			}
+		</script>
+	</body>
+</html>

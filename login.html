@@ -9,7 +9,7 @@
     <div id="particles-js"></div>
 
 <!-- main stuff -->
-<div class="main">
+<div class="main" id="1">
 	<div>
         <img src="cowboy.svg" style="display:block;margin:auto;height:80px;width:80px;padding-bottom:10px;"/>
 		<div id="a">
@@ -49,13 +49,18 @@
 			b.style.display = "block";
 			return false;
 		} else  {
-		c.innerHTML = "Logging in..."
+		c.innerHTML = "Logging in...";
 		document.getElementById("btn").style.filter = "grayscale(50%)";
-		window.setTimeout(redirect,1000);
+		window.setTimeout(redirect1,2000);
 		}
 	}
-	function redirect() {
-		window.location.href = "member.html?action=logout";
+	function redirect1() {
+		var all = document.getElementById("1");
+		all.innerHTML = '<img src="cowboy.svg" style="display:block;margin:auto;height:80px;width:80px;padding-bottom:10px;"/><h1 style="padding-bottom:10px; text-align: center;">Coolio Site</h1><h2>Logged in! :D</h2>'
+		window.setTimeout(redirect2,2000);
+		function redirect2()  {
+			window.location.href = "member.html?action=logout";
+		}
 	}
 	</script>
     <script src="pjs/particles.js" defer></script>

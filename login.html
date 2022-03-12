@@ -56,7 +56,7 @@
 	}
 	function redirect1() {
 		var all = document.getElementById("1");
-		all.innerHTML = '<img src="cowboy.svg" style="display:block;margin:auto;height:80px;width:80px;padding-bottom:10px;"/><h1 style="padding-bottom:10px; text-align: center;">Coolio Site</h1><h2>Logged in! :D</h2>'
+		all.innerHTML = '<div><img src="cowboy.svg" style="display:block;margin:auto;height:80px;width:80px;padding-bottom:10px;"/><h1 style="padding-bottom:10px; text-align: center;">Coolio Site</h1><p style="font-size:16px;"><i>Logged in! :D</i></p></div>'
 		window.setTimeout(redirect2,2000);
 		function redirect2()  {
 			window.location.href = "member.html?action=logout";

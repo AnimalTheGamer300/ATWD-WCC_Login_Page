@@ -1,60 +1,69 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="style.css">
-    <title>Coolio Site</title>
-  </head>
-  <body>
-    <!-- Cool Kid Particles.js -->
-    <div id="particles-js"></div>
-
-<!-- main stuff -->
-<div class="main" id="1">
-	<div>
-        <img src="cowboy.svg" style="display:block;margin:auto;height:80px;width:80px;padding-bottom:10px;"/>
-		<div id="a">
-			<h1 style="padding-bottom:10px; text-align: center;">Coolio Site</h1>
-			<div id="ualert">
-				<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-				<p><strong>Error:</strong>  Invalid Username!</p>
-			</div>
-			<div id="palert">
-				<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-				<p><strong>Error:</strong>  Password too short!</p>
-			</div>
-				<div>
-					<label for="un">Username:</label>
-					<input type="text" id="un" name="username" placeholder="Username123">
+	<head>
+    		<link rel="stylesheet" href="style.css">
+	    	<!-- Primary -->
+		<title>Coolio Site | Home</title>
+		<meta name="title" content="Coolio Site | Home">
+		<meta name="description" content="Weekly code challenge submission.">
+		<meta name="theme-color" content="#ff0000">
+		<!-- Open Graph -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://animalthegamer300.github.io/ATWD-WCC_Login_Page/">
+		<meta property="og:title" content="Coolio Site | Home">
+		<meta property="og:description" content="Weekly code challenge submission.">
+		<meta property="og:image" content="https://media1.giphy.com/media/YQitE4YNQNahy/200.gif">
+  	</head>
+  	<body>
+		 <!-- Cool Kid Particles.js -->
+		 <div id="particles-js"></div>
+		<!-- main stuff -->
+	<div class="main" id="1">
+		<div>
+		<img src="cowboy.svg" style="display:block;margin:auto;height:80px;width:80px;padding-bottom:10px;"/>
+			<div id="a">
+				<h1 style="padding-bottom:10px; text-align: center;">Coolio Site</h1>
+				<div id="ualert">
+					<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+					<p><strong>Error:</strong>  Invalid Username!</p>
 				</div>
-				<div>
-					<label for="pw">Password:</label>
-					<input type="text" id="pw" name="password" placeholder="Password123!">
+				<div id="palert">
+					<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+					<p><strong>Error:</strong>  Password too short!</p>
 				</div>
-			<a id="btn" onclick="validateForm()" style="cursor:pointer;border:none;">Login</a>
+					<div>
+						<label for="un">Username:</label>
+						<input type="text" id="un" name="username" placeholder="Username123">
+					</div>
+					<div>
+						<label for="pw">Password:</label>
+						<input type="text" id="pw" name="password" placeholder="Password123!">
+					</div>
+				<a id="btn" onclick="validateForm()" style="cursor:pointer;border:none;">Login</a>
+			</div>
 		</div>
 	</div>
-</div>
 	<script>
-	document.getElementById("btn").addEventListener("click", validateForm);
-	function validateForm() {
-		let x = document.getElementById("un").value;
-		let y = document.getElementById("pw").value;
-		var a = document.getElementById("ualert");
-		var b = document.getElementById("palert");
-		var c = document.getElementById("btn");
-		if (x == "") {
-			a.style.display = "block";
-			return false;
-		} else if (y == ""  || y.length < 8){
-			b.style.display = "block";
-			return false;
-		} else  {
-		c.innerHTML = "Logging in...";
-		document.getElementById("btn").style.filter = "grayscale(50%)";
-		window.setTimeout(redirect1,2000);
+		document.getElementById("btn").addEventListener("click", validateForm);
+		function validateForm() {
+			let x = document.getElementById("un").value;
+			let y = document.getElementById("pw").value;
+			var a = document.getElementById("ualert");
+			var b = document.getElementById("palert");
+			var c = document.getElementById("btn");
+			if (x == "") {
+				a.style.display = "block";
+				return false;
+			} else if (y == ""  || y.length < 8){
+				b.style.display = "block";
+				return false;
+			} else  {
+			c.innerHTML = "Logging in...";
+			document.getElementById("btn").style.filter = "grayscale(50%)";
+			window.setTimeout(redirect1,2000);
+			}
 		}
-	}
-	function redirect1() {
+		function redirect1() {
 		var all = document.getElementById("1");
 		all.innerHTML = '<div><img src="cowboy.svg" style="display:block;margin:auto;height:80px;width:80px;padding-bottom:10px;"/><h1 style="padding-bottom:10px; text-align: center;">Coolio Site</h1><p style="font-size:16px;"><i>Logged in! :D</i></p></div>'
 		window.setTimeout(redirect2,2000);
@@ -62,9 +71,8 @@
 			window.location.href = "member.html?action=logout";
 		}
 	}
-	</script>
-    <script src="pjs/particles.js" defer></script>
-    <script src="pjs/app.js" defer></script>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"/>
-  </body>
+		</script>
+    		<script src="pjs/particles.js" defer></script>
+    		<script src="pjs/app.js" defer></script>
+	</body>
 </html>
